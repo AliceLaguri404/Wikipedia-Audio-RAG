@@ -1,6 +1,7 @@
 # Voice-Enabled RAG System 🎤🤖
 
 A production-ready conversational AI system that processes voice queries in multiple Indian languages and provides intelligent responses using Retrieval-Augmented Generation (RAG) from Wikipedia knowledge base.
+<img width="1384" height="780" alt="Screenshot 2026-01-29 at 8 13 46 PM" src="https://github.com/user-attachments/assets/6662bbe0-f45f-467f-8f63-20f569b14f4b" />
 
 ## 🌟 Features
 

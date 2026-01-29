@@ -188,6 +188,9 @@ SARVAM_API_KEY=your_sarvam_api_key_here
 # Gemini AI (Required for LLM - Default provider)
 GEMINI_API_KEY=your_gemini_api_key_here
 
+# Huggin Face token
+HF_API_TOKEN = your_hf_access_token
+
 # Optional: OpenAI (Alternative LLM provider)
 OPENAI_API_KEY=your_openai_api_key_here
 ```

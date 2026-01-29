@@ -1,0 +1,102 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Storage & Data
+storage/
+!storage/.gitkeep
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# Cache
+.cache/
+*.cache
+
+# Model Files
+*.pt
+*.pth
+*.onnx
+*.bin
+
+# Audio Files
+*.wav
+*.mp3
+*.m4a
+*.webm
+*.ogg
+*.flac
+
+# Documents
+storage/
+documents/
+temp/
+
+# Qdrant Storage
+qdrant_storage/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Docker
+.dockerignore
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini

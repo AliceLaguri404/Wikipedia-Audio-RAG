@@ -1,0 +1,30 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Install curl for the healthcheck defined in docker-compose
+RUN apt-get update && apt-get install -y \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install dependencies
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir streamlit requests
+
+# Copy only the frontend folder
+COPY frontend/ ./frontend/
+
+# If your app.py imports from a 'src' or 'utils' folder, 
+# you might need to copy those specific folders too.
+# COPY src/ ./src/ 
+
+ENV PYTHONUNBUFFERED=1
+
+EXPOSE 8501
+
+# Streamlit-specific config to prevent CORS issues in Docker
+CMD ["streamlit", "run", "frontend/app.py", \
+     "--server.port=8501", \
+     "--server.address=0.0.0.0", \
+     "--server.enableCORS=false", \
+     "--server.enableXsrfProtection=false"]

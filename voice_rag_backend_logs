@@ -1,0 +1,151 @@
+voice-rag-backend  | 2026-01-29 18:54:30,350 - src.api.main - INFO - 🚀 Starting Voice-Enabled RAG System
+voice-rag-backend  | 2026-01-29 18:54:30,351 - src.api.main - INFO - Version: 1.0.0
+voice-rag-backend  | 2026-01-29 18:54:30,351 - src.api.main - INFO - Debug Mode: False
+voice-rag-backend  | 2026-01-29 18:54:30,351 - src.api.main - INFO - ✅ Application started successfully
+voice-rag-backend  | INFO:     Application startup complete.
+voice-rag-backend  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+voice-rag-backend  | INFO:     127.0.0.1:45490 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:58446 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:48162 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | 2026-01-29 18:54:55,417 - src.api.routes.chat - INFO - 🚀 Starting RAG pipeline
+voice-rag-backend  | 2026-01-29 18:54:55,418 - src.api.routes.chat - INFO - 🎤 Step 1: Audio transcription
+voice-rag-backend  | 2026-01-29 18:54:55,419 - src.services.asr_service - INFO - 🔄 Loading IndicConformer (Lightweight): ai4bharat/indic-conformer-600m-multilingual...
+voice-rag-backend  | A new version of the following files was downloaded from https://huggingface.co/ai4bharat/indic-conformer-600m-multilingual:
+voice-rag-backend  | - model_onnx.py
+voice-rag-backend  | . Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+voice-rag-backend  | Please check FRAME_DURATION_MS. The timestamps can be inaccurate
+voice-rag-backend  | Please check FRAME_DURATION_MS. The timestamps can be inaccurate
+Fetching 404 files: 100%|██████████| 404/404 [06:50<00:00,  1.02s/it]
+voice-rag-backend  | Please check FRAME_DURATION_MS. The timestamps can be inaccurate
+voice-rag-backend  | 2026-01-29 19:01:49,841 - src.services.asr_service - INFO - IndicConformer initialized successfully
+voice-rag-backend  | 2026-01-29 19:01:49,841 - src.services.asr_service - INFO - 🎤 Starting transcription for: storage/temp/audio_1769712895_input.wav
+voice-rag-backend  | 2026-01-29 19:01:57,016 - src.services.asr_service - INFO - ✅ Transcription completed in 7.17s
+voice-rag-backend  | 2026-01-29 19:01:57,016 - src.api.routes.chat - INFO - 🌐 Step 2: Translation
+voice-rag-backend  | 2026-01-29 19:01:57,024 - src.services.translation_service - INFO - ✅ Translation Service initialized with Sarvam AI
+voice-rag-backend  | 2026-01-29 19:01:57,024 - src.services.translation_service - INFO - 🌐 Translating text (length: 46 chars)
+voice-rag-backend  | 2026-01-29 19:01:57,325 - src.services.translation_service - INFO - ✅ Translation completed
+voice-rag-backend  | 2026-01-29 19:01:57,360 - src.services.llm_service - INFO - ✅ Gemini LLM initialized
+voice-rag-backend  | INFO:     127.0.0.1:37926 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:57284 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:52778 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:41370 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:46648 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:58736 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:36188 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:46072 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:56338 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:54906 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:37844 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:57972 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:33128 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:58038 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:53610 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:44098 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:44058 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:39026 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:41994 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:47308 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:34518 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:47206 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:56092 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:48264 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:45840 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:40796 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:34610 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:40032 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | decomposition_result: {'titles': ['India'], 'improvised_queries': ['India geography demographics history government economy']}
+voice-rag-backend  | 2026-01-29 19:01:58,472 - src.api.routes.chat - INFO - ✨ Target Wiki Titles: '['India']'
+voice-rag-backend  | 2026-01-29 19:01:58,472 - src.api.routes.chat - INFO - 🔍 Optimized Search Queries: '['India geography demographics history government economy']'
+voice-rag-backend  | 2026-01-29 19:01:58,472 - src.core.chunker - INFO - ✅ LangChain RecursiveCharacterTextSplitter initialized
+voice-rag-backend  | 2026-01-29 19:01:58,472 - src.core.embedder - INFO - 📥 Loading embedding model: sentence-transformers/all-MiniLM-L6-v2
+voice-rag-backend  | Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|██████████| 103/103 [00:00<00:00, 5908.36it/s, Materializing param=pooler.dense.weight]                             
+voice-rag-backend  | BertModel LOAD REPORT from: sentence-transformers/all-MiniLM-L6-v2
+voice-rag-backend  | Key                     | Status     |  | 
+voice-rag-backend  | ------------------------+------------+--+-
+voice-rag-backend  | embeddings.position_ids | UNEXPECTED |  | 
+voice-rag-backend  | 
+voice-rag-backend  | Notes:
+voice-rag-backend  | - UNEXPECTED       :can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+voice-rag-backend  | 2026-01-29 19:02:21,640 - src.core.embedder - INFO - ✅ Model loaded successfully
+voice-rag-backend  | 2026-01-29 19:02:21,640 - src.core.embedder - INFO - 📊 Embedding dimension: 384
+voice-rag-backend  | 2026-01-29 19:02:21,644 - src.core.deduplication - INFO - 📦 Loaded cache with 103 documents
+voice-rag-backend  | 2026-01-29 19:02:21,645 - src.services.scraper_service - INFO - ✅ Scraper Service initialized
+Fetching 18 files: 100%|██████████| 18/18 [00:00<00:00, 25.11it/s]
+voice-rag-backend  | 2026-01-29 19:02:23,151 - src.services.Ingest_retrieve_service - INFO -  Sparse Embedder (BM25) initialized
+voice-rag-backend  | INFO:flashrank.Ranker:Downloading ms-marco-MiniLM-L-12-v2...
+ms-marco-MiniLM-L-12-v2.zip: 100%|██████████| 21.6M/21.6M [00:03<00:00, 6.45MiB/s]
+voice-rag-backend  | 2026-01-29 19:02:27,202 - src.services.Ingest_retrieve_service - INFO -  Hybrid RAG: Sparse Embedder & Reranker initialized
+voice-rag-backend  | 2026-01-29 19:02:27,202 - src.services.Ingest_retrieve_service - INFO - 🔌 Connecting to Qdrant at http://qdrant:6333...
+voice-rag-backend  | INFO:src.services.Ingest_retrieve_service: Hybrid RAG: Sparse Embedder & Reranker initialized
+voice-rag-backend  | INFO:src.services.Ingest_retrieve_service:🔌 Connecting to Qdrant at http://qdrant:6333...
+voice-rag-backend  | INFO:httpx:HTTP Request: GET http://qdrant:6333 "HTTP/1.1 200 OK"
+voice-rag-backend  | /app/src/services/Ingest_retrieve_service.py:57: UserWarning: Qdrant client version 1.16.2 is incompatible with server version 1.11.3. Major versions should match and minor version difference must not exceed 1. Set check_compatibility=False to skip version check.
+voice-rag-backend  |   self.client = QdrantClient(url=settings.QDRANT_URL)
+voice-rag-backend  | INFO:httpx:HTTP Request: GET http://qdrant:6333/collections "HTTP/1.1 200 OK"
+voice-rag-backend  | 2026-01-29 19:02:27,220 - src.services.Ingest_retrieve_service - INFO - ✅ Connected to Qdrant Docker Server
+voice-rag-backend  | 2026-01-29 19:02:27,220 - src.api.routes.chat - INFO - 📥 Step 4: Incremental Ingestion
+voice-rag-backend  | INFO:src.services.Ingest_retrieve_service:✅ Connected to Qdrant Docker Server
+voice-rag-backend  | INFO:src.api.routes.chat:📥 Step 4: Incremental Ingestion
+voice-rag-backend  | 2026-01-29 19:02:27,220 - src.api.routes.chat - INFO - 📚 Processing topic: India
+voice-rag-backend  | 2026-01-29 19:02:27,220 - src.services.Ingest_retrieve_service - INFO - 🧠 Processing Complex Query: 'India'
+voice-rag-backend  | INFO:src.api.routes.chat:📚 Processing topic: India
+voice-rag-backend  | INFO:src.services.Ingest_retrieve_service:🧠 Processing Complex Query: 'India'
+voice-rag-backend  | INFO:     127.0.0.1:43056 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:53902 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:google_genai.models:AFC is enabled with max remote calls: 10.
+voice-rag-backend  | 2026-01-29 19:02:28,307 - src.services.Ingest_retrieve_service - INFO - 🔀 Decomposed into: ['India']
+voice-rag-backend  | 2026-01-29 19:02:28,307 - src.services.Ingest_retrieve_service - INFO - 🌐 Scraping 1 topics: ['India']
+voice-rag-backend  | INFO:src.services.Ingest_retrieve_service:🔀 Decomposed into: ['India']
+voice-rag-backend  | INFO:src.services.Ingest_retrieve_service:🌐 Scraping 1 topics: ['India']
+voice-rag-backend  | INFO:src.services.scraper_service:🚀 Scraping Wikipedia for: 'india'
+voice-rag-backend  | 2026-01-29 19:02:28,313 - src.services.scraper_service - INFO - 🚀 Scraping Wikipedia for: 'india'
+voice-rag-backend  | INFO:src.core.deduplication:❌ Wiki Article 'india' NOT in cache. Proceeding to scrape.
+voice-rag-backend  | 2026-01-29 19:02:28,314 - src.core.deduplication - INFO - ❌ Wiki Article 'india' NOT in cache. Proceeding to scrape.
+voice-rag-backend  | 2026-01-29 19:02:29,341 - src.services.scraper_service - INFO - ✅ Found best matching article: 'India'
+voice-rag-backend  | INFO:src.services.scraper_service:✅ Found best matching article: 'India'
+voice-rag-backend  | 2026-01-29 19:02:31,864 - src.services.scraper_service - INFO - 📊 Extracting comprehensive content (tables, lists, formatting)...
+voice-rag-backend  | INFO:src.services.scraper_service:📊 Extracting comprehensive content (tables, lists, formatting)...
+voice-rag-backend  | 2026-01-29 19:02:33,160 - src.services.scraper_service - INFO - 💾 Saved to: storage/documents/india_wikipedia.txt
+voice-rag-backend  | INFO:src.services.scraper_service:💾 Saved to: storage/documents/india_wikipedia.txt
+voice-rag-backend  | INFO:src.core.deduplication:💾 Cached document for 'india'
+voice-rag-backend  | 2026-01-29 19:02:33,164 - src.core.deduplication - INFO - 💾 Cached document for 'india'
+voice-rag-backend  | 2026-01-29 19:02:33,164 - src.services.scraper_service - INFO - ✅ Successfully scraped and cached: India
+voice-rag-backend  | INFO:src.services.scraper_service:✅ Successfully scraped and cached: India
+voice-rag-backend  | 2026-01-29 19:02:33,165 - src.core.chunker - INFO - ✂️ Chunking text (381315 characters)
+voice-rag-backend  | INFO:src.core.chunker:✂️ Chunking text (381315 characters)
+voice-rag-backend  | INFO:src.core.chunker:🧩 Created 1176 chunks
+voice-rag-backend  | 2026-01-29 19:02:33,169 - src.core.chunker - INFO - 🧩 Created 1176 chunks
+voice-rag-backend  | 2026-01-29 19:02:33,171 - src.services.Ingest_retrieve_service - INFO - 📊 Generated 1176 chunks, checking for duplicates...
+voice-rag-backend  | INFO:src.services.Ingest_retrieve_service:📊 Generated 1176 chunks, checking for duplicates...
+voice-rag-backend  | 2026-01-29 19:02:33,174 - src.core.deduplication - INFO - 🧹 Removed 4 duplicate chunks
+voice-rag-backend  | 2026-01-29 19:02:33,174 - src.services.Ingest_retrieve_service - INFO - ✅ 1172 unique chunks (removed 4 duplicates)
+voice-rag-backend  | INFO:src.core.deduplication:🧹 Removed 4 duplicate chunks
+voice-rag-backend  | INFO:src.services.Ingest_retrieve_service:✅ 1172 unique chunks (removed 4 duplicates)
+voice-rag-backend  | 2026-01-29 19:02:33,174 - src.core.embedder - INFO - 🧮 Generating embeddings for 1172 texts
+voice-rag-backend  | INFO:src.core.embedder:🧮 Generating embeddings for 1172 texts
+Batches: 100%|██████████| 37/37 [00:18<00:00,  1.99it/s]
+voice-rag-backend  | 2026-01-29 19:02:51,773 - src.core.embedder - INFO - ✅ Generated 1172 embeddings
+voice-rag-backend  | INFO:src.core.embedder:✅ Generated 1172 embeddings
+voice-rag-backend  | INFO:httpx:HTTP Request: GET http://qdrant:6333/collections "HTTP/1.1 200 OK"
+voice-rag-backend  | INFO:httpx:HTTP Request: PUT http://qdrant:6333/collections/voice_rag_knowledge_base/points?wait=true "HTTP/1.1 200 OK"
+voice-rag-backend  | INFO:src.services.Ingest_retrieve_service:✅ RAG Complete: 1172 new chunks, 4 duplicates skipped in 25.06s
+voice-rag-backend  | INFO:src.api.routes.chat:✅ Ingestion complete. Added 0 new chunks across 1 topics.
+voice-rag-backend  | 2026-01-29 19:02:52,278 - src.services.Ingest_retrieve_service - INFO - ✅ RAG Complete: 1172 new chunks, 4 duplicates skipped in 25.06s
+voice-rag-backend  | 2026-01-29 19:02:52,278 - src.api.routes.chat - INFO - ✅ Ingestion complete. Added 0 new chunks across 1 topics.
+voice-rag-backend  | 2026-01-29 19:02:52,278 - src.api.routes.chat - INFO - 🔎 Step 5: Retrieval
+voice-rag-backend  | INFO:src.api.routes.chat:🔎 Step 5: Retrieval
+voice-rag-backend  | 2026-01-29 19:02:52,278 - src.core.embedder - INFO - 🧮 Generating embeddings for 1 texts
+voice-rag-backend  | INFO:src.core.embedder:🧮 Generating embeddings for 1 texts
+Batches: 100%|██████████| 1/1 [00:00<00:00, 73.21it/s]
+voice-rag-backend  | 2026-01-29 19:02:52,293 - src.core.embedder - INFO - ✅ Generated 1 embeddings
+voice-rag-backend  | INFO:src.core.embedder:✅ Generated 1 embeddings
+voice-rag-backend  | INFO:httpx:HTTP Request: POST http://qdrant:6333/collections/voice_rag_knowledge_base/points/query "HTTP/1.1 200 OK"
+voice-rag-backend  | retrieved_chunks: [RetrievedChunk(text='• [Republic](/wiki/Republic "Republic") | [26 January 1950](/wiki/Republic_Day_\\(India\\) "Republic Day \\(India\\)")\n[Area ](/wiki/Geography_of_India "Geography of India")\n• Total| 3,287,263 km2 (1,269,219 sq mi) ([7th](/wiki/List_of_countries_and_dependencies_by_area "List of countries and dependencies by area"))\n• Water (%)| 9.6\n[Population](/wiki/Demographics_of_India "Demographics of India")', metadata={'source_file': 'india_wikipedia.txt', 'article_title': 'India', 'chunk_index': 20, 'total_chunks': 1176, 'chunk_size_chars': 396, 'created_at': '2026-01-29T19:02:33.169666'}, score=0.19207347929477692, chunk_id='abeca608-a266-541e-a8a8-ebf4720e4046'), RetrievedChunk(text="Migration from rural to urban areas has been an important dynamic in India's recent history. The number of people living in urban areas grew by 31.2% between 1991 and 2001. In 2001, over 70% lived in rural areas. The level of urbanisation increased further from 27.81% in the 2001 census to 31.16% in the 2011 census. The slowing down of the overall population growth rate was due to the sharp decline in the growth rate in rural areas since 1991", metadata={'source_file': 'india_wikipedia.txt', 'article_title': 'India', 'chunk_index': 367, 'total_chunks': 1176, 'chunk_size_chars': 446, 'created_at': '2026-01-29T19:02:33.170283'}, score=0.05715058743953705, chunk_id='5c4a884b-7cab-5121-85df-e9ef9c7c5216')]
+voice-rag-backend  | 2026-01-29 19:02:52,815 - src.api.routes.chat - INFO - 🤖 Step 6: Generation
+voice-rag-backend  | INFO:src.api.routes.chat:🤖 Step 6: Generation
+voice-rag-backend  | INFO:google_genai.models:AFC is enabled with max remote calls: 10.
+voice-rag-backend  | INFO:     127.0.0.1:56960 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:42660 - "GET /api/v1/health HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     172.19.0.4:46458 - "POST /api/v1/chat/query HTTP/1.1" 200 OK
+voice-rag-backend  | INFO:     127.0.0.1:54012 - "GET /api/v1/health HTTP/1.1" 200 OK

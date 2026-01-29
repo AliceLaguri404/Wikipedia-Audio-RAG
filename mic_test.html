@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voice RAG - Mic Test</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; max-width: 600px; margin: 0 auto; }
+        .btn { padding: 10px 20px; font-size: 16px; cursor: pointer; border: none; border-radius: 5px; margin-right: 10px; }
+        #recordBtn { background-color: #e74c3c; color: white; }
+        #stopBtn { background-color: #34495e; color: white; }
+        #stopBtn:disabled { background-color: #ccc; }
+        #status { margin-top: 15px; font-weight: bold; color: #555; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h1>🎙️ Voice RAG Mic Test</h1>
+    <p>Click Record, speak, then click Stop to send to API.</p>
+
+    <button id="recordBtn" class="btn">Start Recording</button>
+    <button id="stopBtn" class="btn" disabled>Stop & Send</button>
+
+    <div id="status">Ready</div>
+    <h3>Response:</h3>
+    <pre id="output">Waiting for input...</pre>
+
+    <script>
+        let mediaRecorder;
+        let audioChunks = [];
+        const recordBtn = document.getElementById("recordBtn");
+        const stopBtn = document.getElementById("stopBtn");
+        const status = document.getElementById("status");
+        const output = document.getElementById("output");
+
+        recordBtn.addEventListener("click", async () => {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                audioChunks = [];
+
+                mediaRecorder.ondataavailable = event => {
+                    audioChunks.push(event.data);
+                };
+
+                mediaRecorder.onstop = sendAudioToAPI;
+
+                mediaRecorder.start();
+                recordBtn.disabled = true;
+                stopBtn.disabled = false;
+                recordBtn.style.backgroundColor = "#ccc";
+                status.textContent = "🔴 Recording... (Speak now)";
+            } catch (err) {
+                console.error("Error accessing mic:", err);
+                status.textContent = "❌ Error: Could not access microphone. Check permissions.";
+            }
+        });
+
+        stopBtn.addEventListener("click", () => {
+            mediaRecorder.stop();
+            recordBtn.disabled = false;
+            stopBtn.disabled = true;
+            recordBtn.style.backgroundColor = "#e74c3c";
+            status.textContent = "⏳ Processing...";
+        });
+
+        async function sendAudioToAPI() {
+            // 1. Create Blob from recorded chunks (usually WebM)
+            const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+            
+            // 2. Prepare Form Data
+            const formData = new FormData();
+            // Note: We give it a filename so FastAPI sees it as an upload
+            formData.append("audio_file", audioBlob, "mic_recording.webm");
+            formData.append("language_code", "hi-IN");
+            
+            try {
+                // 3. Send to your running local API
+                const response = await fetch("http://127.0.0.1:8000/api/v1/transcribe", {
+                    method: "POST",
+                    body: formData
+                });
+
+                const result = await response.json();
+                output.textContent = JSON.stringify(result, null, 2);
+                status.textContent = "✅ Finished!";
+            } catch (err) {
+                console.error("API Error:", err);
+                output.textContent = "Error connecting to API: " + err.message;
+                status.textContent = "❌ Failed";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+MIT License
+
+Copyright (c) 2024 Voice-Enabled RAG System Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+Third-Party Licenses and Attributions:
+
+This project uses the following open-source libraries and models:
+
+1. AI4Bharat IndicConformer
+   - License: MIT License
+   - Source: https://github.com/AI4Bharat/IndicConformer
+
+2. Sentence-Transformers
+   - License: Apache License 2.0
+   - Source: https://github.com/UKPLab/sentence-transformers
+
+3. Qdrant
+   - License: Apache License 2.0
+   - Source: https://github.com/qdrant/qdrant
+
+4. LangChain
+   - License: MIT License
+   - Source: https://github.com/langchain-ai/langchain
+
+5. FastAPI
+   - License: MIT License
+   - Source: https://github.com/tiangolo/fastapi
+
+6. Streamlit
+   - License: Apache License 2.0
+   - Source: https://github.com/streamlit/streamlit
+
+7. FlashRank
+   - License: Apache License 2.0
+   - Source: https://github.com/PrithivirajDamodaran/FlashRank
+
+API Services:
+- Sarvam AI Translation API (https://www.sarvam.ai/)
+- Google Gemini LLM API (https://ai.google.dev/)
+- Wikipedia API (https://www.mediawiki.org/wiki/API)
+
+All trademarks and registered trademarks are the property of their respective owners.

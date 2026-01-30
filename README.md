@@ -215,7 +215,7 @@ LLM_PROVIDER = "gemini"  # or "openai"
 
 # Chunking Strategy
 CHUNK_SIZE = 512
-CHUNK_OVERLAP = 50
+CHUNK_OVERLAP = 150
 
 # Retrieval Settings
 TOP_K_RESULTS = 2
@@ -262,6 +262,8 @@ docker compose logs -f
 # Stop services
 docker- compose down
 ```
+
+Note: The first run will take time to run (Cold Start)
 
 ## 📚 API Documentation
 
